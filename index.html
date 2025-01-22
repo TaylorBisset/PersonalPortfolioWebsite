@@ -18,14 +18,14 @@
 
         <!-- header -->
         <header>
-            
+            <h1>Taylor Bisset</h1>
         </header>
 
         <!-- nav -->
         <nav>
             <a href="index.html">Home</a>
-            <a href="pages/about.html">About Me</a>
             <a href="pages/resume.html">Resume</a>
+            <a href="pages/about.html">About Me</a>
             <a href="pages/contact.html">Contact Me</a>
             <a href="pages/links.html">Links</a>
         </nav>
@@ -39,7 +39,10 @@
 
         <!-- footer -->
         <footer>
-
+            <p><small>Copyright &copy <span id="year"></span></small></p>
+            <script>
+                document.getElementById("year").innerHTML = new Date().getFullYear();
+            </script>
         </footer>
 
     </div>
