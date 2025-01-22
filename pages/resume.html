@@ -1,0 +1,114 @@
+<!-- resume.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- head -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taylor Bisset | Resume</title>
+
+    <!-- description for SEO -->
+    <meta name="description" content="Explore the portfolio of Taylor Bisset, a passionate computer science student, game designer, and web designer.">
+
+    <!-- keywords for SEO -->
+    <meta name="keywords" content="Taylor Bisset, portfolio, game designer, web developer, computer science student, projects, resume, contact">
+
+    <!-- author -->
+    <meta name="author" content="Taylor Bisset">
+
+    <!-- Open Graph for Social Media -->
+    <meta property="og:title" content="Taylor Bisset | Resume">
+    <meta property="og:description" content="Explore the portfolio of Taylor Bisset, a passionate computer science student, game designer, and web designer.">
+    <meta property="og:image" content="images/TaylorBisset.jpg">
+    <meta property="og:url" content="https://taylorbisset.com">
+    <meta property="og:type" content="website">
+
+    <!-- favicon -->
+     <link rel="shortcut icon" href="/images/TaylorBisset.jpg" type="image/x-icon">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- fonts -->
+
+    <!-- script -->
+    <script src="/js/script.js" defer></script>
+</head>
+
+<!-- body -->
+<body>
+
+    <!-- wrapper div -->
+    <div id="wrapper">
+
+        <!-- header -->
+        <header>
+            <h1>Taylor Bisset | Resume</h1>
+        </header>
+
+        <!-- nav -->
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="links.html">Links</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- main -->
+        <main>
+
+            <section id="pdf-download">
+                <h2>Downloadable Resume</h2>
+                <p>
+                    You can view my resume below or 
+                    <a href="/documents/TaylorBissetResume.pdf">download the PDF here</a>.
+                </p>
+            </section>
+
+            <hr>
+
+            <section id="hero">
+                <h2>Taylor Bisset</h2>
+
+                <p>
+                    Computer Science Student | Program Manager | Educator
+                </p>
+            </section>
+
+            <section id="interactive-resume">
+                <div id="resume-tabs">
+                    <button onclick="showTab('education')">Education</button>
+                    <button onclick="showTab('experience')">Experience</button>
+                    <button onclick="showTab('skills')">Skills</button>
+                </div>
+
+                <div id="education" class="resume-section">
+                    <h3>Education</h3>
+                    <ul>
+                        <li><strong></strong></li>
+                    </ul>
+                </div>
+            </section>
+
+            <hr>
+            
+        </main>
+
+        <!-- footer -->
+        <footer>
+            <p>
+                <small>Copyright &copy <span id="year"></span></small>
+            </p>
+            <script>
+                document.getElementById("year").innerHTML = new Date().getFullYear();
+            </script>
+        </footer>
+
+    </div>
+    
+</body>
+</html>
