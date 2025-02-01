@@ -23,6 +23,9 @@ Secondary Text: Electric Blue #74FDFD
 Accent (10):    Robin Egg Blue #00CCCC  
 */
 
+
+/* General Styles */
+
 * {
     margin: 0;
     padding: 0;
@@ -38,7 +41,7 @@ body {
 }
 
 #wrapper {
-    width: 90%;
+    width: 80%;
     margin: auto;
     overflow: hidden;
 }
@@ -46,4 +49,36 @@ body {
 header {
     background-color: #202020;
     padding: 30px;
+    font-size: 1.5em;
+}
+
+
+/* Navigation */
+
+nav {
+    position: sticky;
+    top: 0;
+}
+
+nav ul {
+    display: flex;
+    background-color: #202020;
+    justify-content: center;
+    padding: 10px;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #74FDFD;
+    transition: 0.3s;
+    font-size: 1.2em;
+}
+
+nav ul li a:hover {
+    color: #00CCCC;
 }
