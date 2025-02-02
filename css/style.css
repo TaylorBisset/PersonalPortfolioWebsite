@@ -1,6 +1,5 @@
 /* style.css */ 
 
-
 /* 
 Dark Mode: 
 Primary (60):   Erie Black #202020 
@@ -23,7 +22,6 @@ Secondary Text: Electric Blue #74FDFD
 Accent (10):    Robin Egg Blue #00CCCC  
 */
 
-
 /* General Styles */
 
 * {
@@ -38,19 +36,22 @@ body {
     color: #E0E0E0;
     font-size: 1.3em;
     line-height: 1.6em;
-    text-align: center;
 }
 
 #wrapper {
     width: 80%;
     margin: auto;
-    overflow: hidden;
 }
 
 header {
     background-color: #202020;
-    padding: 30px;
     font-size: 1.5em;
+    padding: 20px;
+}
+
+h1, h2 {
+    padding-bottom: 20px;
+    text-align: center;
 }
 
 
@@ -86,30 +87,32 @@ nav ul li a:hover {
     color: #00CCCC;
 }
 
-
 /* Sections */
 
 section {
     background-color: #202020;
-    border-radius: 10px;
     padding: 40px 100px;
     margin: 20px 0;
+    border-radius: 10px;
+    border: 0.1px solid #404040;
+    box-shadow: 8px 8px 8px #202020;
 }
 
 /* Footer */
-
-h2 {
-    padding-bottom: 20px;
-}
 
 footer {
     background-color: #202020;
     padding: 20px 0;
     margin-top: 20px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
     font-size: 0.8em;
     line-height: 1.2em;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: 0.1px solid #404040;
+    box-shadow: 8px 8px 8px #202020;
 }
 
 /* Image Styling */
@@ -142,3 +145,20 @@ a {
 a:hover {
     color: #00CCCC;
 }
+
+/* Buttons */
+
+button {
+    background-color: #74FDFD;
+    color: #202020;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  button:hover {
+    background: #00CCCC;
+  }
+  
