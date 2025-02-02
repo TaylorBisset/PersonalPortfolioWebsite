@@ -36,7 +36,8 @@ Accent (10):    Robin Egg Blue #00CCCC
 body {
     background-color: #404040;
     color: #E0E0E0;
-    line-height: 1.5em;
+    font-size: 1.3em;
+    line-height: 1.6em;
     text-align: center;
 }
 
@@ -65,6 +66,8 @@ nav ul {
     background-color: #202020;
     justify-content: center;
     padding: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 nav ul li {
@@ -81,4 +84,30 @@ nav ul li a {
 
 nav ul li a:hover {
     color: #00CCCC;
+}
+
+
+/* Sections */
+
+section {
+    background-color: #202020;
+    border-radius: 10px;
+    padding: 40px 100px;
+    margin: 20px 0;
+}
+
+/* Footer */
+
+h2 {
+    padding-bottom: 20px;
+}
+
+footer {
+    background-color: #202020;
+    padding: 20px 0;
+    margin-top: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: 0.8em;
+    line-height: 1.2em;
 }
