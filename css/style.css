@@ -111,3 +111,34 @@ footer {
     font-size: 0.8em;
     line-height: 1.2em;
 }
+
+/* Image Styling */
+
+img {
+    border-radius: 20px;
+    border: 5px solid #404040;
+    margin-bottom: 20px;
+}
+
+/* List Styling */
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+/* Links */
+
+a {
+    color: #74FDFD;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #00CCCC;
+}
