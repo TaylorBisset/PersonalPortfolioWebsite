@@ -96,7 +96,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     font-size: 1.5rem;
-    padding: 1.5rem 2rem;
+    padding: 1rem 2rem;
     position: fixed;
     width: 100%;
     top: 0;
@@ -144,7 +144,8 @@ nav {
     align-items: center;
     justify-content: center;
     text-align: center;
-    backdrop-filter: blur(15px);
+    padding: 3rem 2rem;
+    /* Text blends with background without shadow */
     text-shadow: 
         -2px -2px 0 black, /* Top-left */
         2px -2px 0 black, /* Top-right */
@@ -155,6 +156,9 @@ nav {
 .hero-div {
     display: flex;
     flex-direction: column;
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
 }
 
 .hero-div h1 {
@@ -163,7 +167,6 @@ nav {
 }
 
 .hero p {
-    align-self: center;
     text-align: left;
     padding: 25px;
     margin: 25px;
@@ -175,10 +178,27 @@ nav {
 }
 
 /* =========================== |
-| - - - - - Elements - - - - - |
+| - - - - - Sections - - - - - |
 | =========================== */
 
+section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    scroll-margin-top: 80px;
+    gap: 50px;
+}
 
+h2 {
+    font-size: 2.5rem;
+}
+
+p {
+    max-width: 800px;
+    padding: 10px;
+}
 
 /* ======================== |
 | - - - - - Forms - - - - - |
@@ -187,20 +207,20 @@ nav {
 form input, form textarea {
     width: 100%;
     padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    border: 2px solid var(--accent-dark);
     border-radius: 5px;
+    font-size: 1rem;
 }
 
 form button {
     display: block;
     width: 100%;
-    padding: 10px;
-    background: #333;
-    color: white;
+    padding: 12px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 1rem;
 }
 
 /* ========================= |
