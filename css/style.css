@@ -28,7 +28,6 @@
     box-sizing: border-box;
 }
 
-
 html, body {
     font-family: 'Quicksand', sans-serif;
     font-size: 16px;
@@ -233,4 +232,19 @@ footer {
     text-align: center;
     padding: 1rem;
     border-top: 3px solid var(--secondary);
+}
+
+footer p {
+    margin: 0 auto;
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+    
+}
+
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
+    
 }
