@@ -3,9 +3,9 @@
 | ============================ */
 
 
-/* =============================== |
-| - - - - - Color Scheme - - - - - |
-| =============================== */
+/* ============================= |
+| - - - - - Dark Theme - - - - - |
+| ============================= */
 
 :root {
     --primary: #202020;         /* Eerie Black */
@@ -17,6 +17,43 @@
     --accent-dark: #008C8C;     /* Cyan */
 
     --text-primary: #E0E0E0;    /* Platinum */
+}
+
+/* ============================== |
+| - - - - - Light Theme - - - - - |
+| ============================== */
+
+.light-theme {
+    --primary: #E0E0E0;         /* Platinum */
+
+    --secondary: #00CCCC;       /* Bright Cyan */
+    --secondary-dark: #008C8C;  /* Cyan */
+    
+    --accent: #005F5F;          /* Deep Teal */
+    --accent-dark: #003D3D;     /* Midnight Teal */
+
+    --text-primary: #202020;    /* Eerie Black */
+}
+
+
+/* =============================== |
+| - - - - - Theme Button - - - - - |
+| =============================== */
+
+#theme-toggle {
+    background: var(--secondary);
+    color: var(--primary);
+    padding: 8px 8px;
+    cursor: pointer;
+    font-size: 2rem;
+    border-radius: 5px;
+    border: 1px solid var(--accent-dark);
+    transition: background 0.3s ease;
+    margin: 0 15px;
+}
+
+#theme-toggle:hover {
+    background: var(--accent);
 }
 
 
@@ -120,20 +157,20 @@ nav {
     font-size: 2.5rem;
     margin-bottom: 1rem;
     text-shadow: 
-        -2px -2px 0 black,  
-         2px -2px 0 black,  
-        -2px  2px 0 black,  
-         2px  2px 0 black;  
+        -1px -1px 0 var(--primary),  
+         1px -1px 0 var(--primary),  
+        -1px  1px 0 var(--primary),  
+         1px  1px 0 var(--primary);
 }
 
 .hero p {
     font-size: 1.5rem;
     margin-bottom: 2rem;
     text-shadow: 
-        -1px -1px 0 black,  
-         1px -1px 0 black,  
-        -1px  1px 0 black,  
-         1px  1px 0 black;  
+        -1px -1px 0 var(--primary),  
+         1px -1px 0 var(--primary),  
+        -1px  1px 0 var(--primary),  
+         1px  1px 0 var(--primary);  
 }
 
 .cta-button {
