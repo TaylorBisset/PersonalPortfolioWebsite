@@ -20,3 +20,17 @@ themeToggle.addEventListener('click', () => {
         localStorage.setItem('theme', 'dark');
     }
 });
+
+
+// JQuery Section fade-in script
+$(document).ready(function () {
+    $("section").not(".hero").css("opacity", 0); // Set initial opacity to 0
+
+    $(window).on("scroll", function () {
+        $("section").each(function () {
+            if ($(this).offset().top < $(window).scrollTop() + $(window).height() - 100) {
+                $(this).css("opacity", 1); 
+            }
+        });
+    });
+});

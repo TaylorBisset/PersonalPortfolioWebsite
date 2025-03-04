@@ -2,9 +2,17 @@
 <html lang="en">
 
 <head>
+    <!-- Character Encoding -->
     <meta charset="UTF-8">
+
+    <!-- Viewport Settings -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taylor Bisset - Portfolio</title>
+
+    <!-- PAge Title -->
+    <title>Taylor Bisset</title>
+
+    <!-- Canonical Tag -->
+    <link rel="canonical" href="https://taylorbisset.com">
 
     <!-- SEO Meta Tags -->
     <meta name="description"
@@ -12,14 +20,18 @@
     <meta name="keywords"
         content="Taylor Bisset, portfolio, game designer, web developer, computer science, projects, resume, contact">
     <meta name="author" content="Taylor Bisset">
+    <meta name="robots" content="index, follow">
 
     <!-- Open Graph (Social Media) -->
-    <meta property="og:title" content="Taylor Bisset - Portfolio">
+    <meta property="og:title" content="Taylor Bisset">
     <meta property="og:description"
         content="Explore the portfolio of Taylor Bisset, a passionate computer science student, game developer, and web designer.">
     <meta property="og:image" content="images/TaylorBisset.jpg">
     <meta property="og:url" content="https://taylorbisset.com">
     <meta property="og:type" content="website">
+
+    <!-- Theme Color (For Mobile Browsers) -->
+    <meta name="theme-color" content="#000000">
 
     <!-- Favicon -->
     <link rel="icon" href="images/TaylorBisset.jpg" type="image/x-icon">
@@ -31,8 +43,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
 
+    <!-- jQuery (3.7.1 from CDN) -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
+
     <!-- JavaScript -->
     <script src="js/script.js" defer></script>
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Taylor Bisset",
+            "jobTitle": "Game Developer, Web Designer",
+            "url": "https://taylorbisset.com",
+            "sameAs": [
+                "https://github.com/TaylorBisset",
+                "https://linkedin.com/in/TaylorBisset"
+            ]
+        }
+    </script>
+
 </head>
 
 <body id="home">
@@ -59,8 +89,6 @@
 
     <main>
 
-
-
         <!-- Hero Section -->
         <section id="hero" class="hero">
 
@@ -76,22 +104,23 @@
         </section>
 
 
-
         <!-- About Section -->
         <section id="about">
             <!-- About Header -->
             <div class="about-header">
                 <h2>About Me</h2>
 
-                <img src="images/TaylorBisset.jpg" height="200" width="200" alt="Professional headshot of Taylor Bisset"
-                    loading="lazy">
+                <img src="images/TaylorBisset.jpg" height="200" width="200"
+                    alt="Taylor Bisset smiling in a professional headshot" loading="lazy">
             </div>
 
             <!-- About Content -->
             <div class="about-content">
+
                 <p>
                     I am a <strong>Computer Science student at Western Washington University</strong>, transferring from
-                    Everett Community College with honors. I have a strong passion for <strong>game development, software
+                    Everett Community College with honors. I have a strong passion for <strong>game development,
+                        software
                         engineering, and web design</strong>, where I strive to merge technical expertise with creative
                     expression to craft innovative and functional solutions.
                 </p>
@@ -110,25 +139,27 @@
                     tackling challenges that push my boundaries.
                 </p>
                 <p>
-                    Beyond technology, I am passionate about <strong>lifelong learning and knowledge sharing</strong>. I have 
-                    experience in <strong>teaching and curriculum development</strong>, particularly in 
-                    <em>wilderness survival, health science, and programming</em>. My goal is to bridge the gap between 
+                    Beyond technology, I am passionate about <strong>lifelong learning and knowledge sharing</strong>. I
+                    have
+                    experience in <strong>teaching and curriculum development</strong>, particularly in
+                    <em>wilderness survival, health science, and programming</em>. My goal is to bridge the gap between
                     education and technology, empowering others to develop technical skills in an engaging way.
                 </p>
                 <p>
-                    Outside of my academic and professional pursuits, I enjoy <strong>spending time with my family, 
-                    exploring the outdoors, and analyzing video game mechanics</strong>. My love for gaming extends beyond 
-                    entertainment—it serves as a source of inspiration, helping me understand <strong>player experience, 
-                    storytelling, and design principles</strong>, which I integrate into my own game projects.
+                    Outside of my academic and professional pursuits, I enjoy <strong>spending time with my family,
+                        exploring the outdoors, and analyzing video game mechanics</strong>. My love for gaming extends
+                    beyond
+                    entertainment—it serves as a source of inspiration, helping me understand <strong>player experience,
+                        storytelling, and design principles</strong>, which I integrate into my own game projects.
                 </p>
                 <p>
-                    As I advance in my career, my ultimate goal is to <strong>develop immersive games, build innovative 
-                    software solutions, and contribute to tech education</strong>. I'm always open to collaborating with 
+                    As I advance in my career, my ultimate goal is to <strong>develop immersive games, build innovative
+                        software solutions, and contribute to tech education</strong>. I'm always open to collaborating
+                    with
                     like-minded individuals and exploring opportunities that align with my vision for the future.
                 </p>
             </div>
         </section>
-
 
 
         <!-- Resume Section -->
@@ -137,6 +168,7 @@
             <!-- Resume Header -->
             <div class="resume-header">
                 <h2>Resume</h2><br><br>
+
                 <a href="documents/Taylor_Bisset_Resume.pdf" target="_blank" class="cta-button">Download My Resume</a>
             </div>
 
@@ -145,8 +177,9 @@
             <div class="resume-content">
 
                 <!-- Professional Summary -->
-                <div class="resume-section professional-summary">
+                <div class="resume-summary">
                     <h2>Professional Summary</h2>
+
                     <p>
                         Results-driven professional transitioning into computer science, bringing a strong background in
                         program management, instructional design, and leadership. Proficient in C++, Java, Python, and
@@ -157,27 +190,29 @@
                     </p>
                 </div>
 
-
-                <!-- Education Section -->
-                <div class="resume-section education">
+                <hr>
+                <!-- Education -->
+                <div class="resume-education">
                     <h2>Education</h2>
+
                     <ul>
-                        <li><strong>Western Washington University – Bellingham, WA (Expected 2027)</strong><br>
+                        <li><strong>Western Washington University - Bellingham, WA (Expected 2027)</strong><br>
                             Bachelor of Science in Computer Science
                         </li>
-                        <li><strong>Everett Community College – Everett, WA (2025)</strong><br>
+                        <li><strong>Everett Community College - Everett, WA (2025)</strong><br>
                             Associate of Arts and Sciences (Honors, Computer Science Interest)
                         </li>
-                        <li><strong>American Military University – Charles Town, WV (2020)</strong><br>
+                        <li><strong>American Military University - Charles Town, WV (2020)</strong><br>
                             Associate of Applied Sciences in Health Sciences
                         </li>
                     </ul>
                 </div>
 
-
-                <!-- Skills Section -->
-                <div class="resume-section skills">
+                <hr>
+                <!-- Skills -->
+                <div class="resume-skills">
                     <h2>Skills</h2>
+
                     <div class="skills-table-wrapper">
                         <table class="skills-table">
                             <thead>
@@ -186,6 +221,7 @@
                                     <th>Skills</th>
                                 </tr>
                             </thead>
+
                             <tbody>
                                 <tr>
                                     <td>Programming Languages</td>
@@ -232,68 +268,111 @@
                     </div>
                 </div>
 
+                <hr>
+                <!-- Experience -->
+                <div class="resume-experience">
 
-                <!-- Experience Section -->
-                <div class="resume-section experience">
                     <h2>Experience</h2>
-                    <div class="job">
-                        <h3>Training Program Manager</h3>
-                        <p><strong>US Navy</strong> | Dec 2017 - Apr 2021 | Oak Harbor, WA</p>
-                        <p><em>Aviation Survival Training Center - Whidbey Island</em></p>
-                        <ul>
-                            <li>Managed high-risk military training for over 200 pilots and aircrew each month, ensuring
-                                strict compliance with safety protocols.</li>
-                            <li>Served as an administrative assistant to senior leadership, handling schedules,
-                                correspondence, and operational reports.</li>
-                            <li>Led aviation water survival training as a Lifeguard and Lead Naval Aviation Water
-                                Survival Training Instructor.</li>
-                            <li>Sexual Assault Prevention and Response (SAPR) Coordinator – Provided direct support to
-                                survivors, coordinated reporting procedures, and led awareness training.</li>
-                        </ul>
+
+                    <div class="timeline-item">
+                        <div class="job">
+                            <h3>Training Program Manager</h3>
+
+                            <p><strong>US Navy</strong> | Dec 2017 - Apr 2021 | Oak Harbor, WA</p>
+                            <p><em>Aviation Survival Training Center - Whidbey Island</em></p>
+                            <ul>
+                                <li>Managed high-risk military training for over 200 pilots and aircrew each month,
+                                    ensuring
+                                    strict compliance with safety protocols.</li>
+                                <li>Served as an administrative assistant to senior leadership, handling schedules,
+                                    correspondence, and operational reports.</li>
+                                <li>Led aviation water survival training as a Lifeguard and Lead Naval Aviation Water
+                                    Survival Training Instructor.</li>
+                                <li>Sexual Assault Prevention and Response (SAPR) Coordinator - Provided direct support
+                                    to
+                                    survivors, coordinated reporting procedures, and led awareness training.</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="job">
-                        <h3>Health Program Coordinator</h3>
-                        <p><strong>US Navy</strong> | Jul 2014 - Dec 2017 | Virginia Beach, VA</p>
-                        <p><em>Naval Branch Health Clinic Oceana</em></p>
-                        <ul>
-                            <li>Developed and managed the Women’s Wellness Program, ensuring care for over 25,000
-                                service members and dependents.</li>
-                            <li>Revamped the Deployment Suitability Program, optimizing screenings and evaluations for
-                                deploying personnel.</li>
-                            <li>Facilitated over 200 hours of training on medical readiness, compliance, and patient
-                                care standards.</li>
-                            <li>Served as a Registered Medical Assistant, assisting with patient care and clinical
-                                procedures.</li>
-                        </ul>
+
+                    <div class="timeline-item">
+                        <div class="job">
+                            <h3>Health Program Coordinator</h3>
+
+                            <p><strong>US Navy</strong> | Jul 2014 - Dec 2017 | Virginia Beach, VA</p>
+                            <p><em>Naval Branch Health Clinic Oceana</em></p>
+                            <ul>
+                                <li>Developed and managed the Women's Wellness Program, ensuring care for over 25,000
+                                    service members and dependents.</li>
+                                <li>Revamped the Deployment Suitability Program, optimizing screenings and evaluations
+                                    for
+                                    deploying personnel.</li>
+                                <li>Facilitated over 200 hours of training on medical readiness, compliance, and patient
+                                    care standards.</li>
+                                <li>Served as a Registered Medical Assistant, assisting with patient care and clinical
+                                    procedures.</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="job">
-                        <h3>Operations Supervisor</h3>
-                        <p><strong>US Navy</strong> | Mar 2015 - Sep 2015 | South & Central America</p>
-                        <p><em>USNS Comfort (T-AH 20) - Operation Continuing Promise 2015</em></p>
-                        <ul>
-                            <li>Supervised Post-Anesthesia Care Unit (PACU) operations, ensuring patient safety and
-                                recovery after surgery.</li>
-                            <li>Worked with multinational teams to provide medical aid, disaster relief, and public
-                                health education in underserved communities.</li>
-                            <li>Assisted in logistics and planning for high-volume patient care, enhancing medical
-                                readiness.</li>
-                        </ul>
+
+                    <div class="timeline-item">
+                        <div class="job">
+                            <h3>Operations Supervisor</h3>
+
+                            <p><strong>US Navy</strong> | Mar 2015 - Sep 2015 | South & Central America</p>
+                            <p><em>USNS Comfort (T-AH 20) - Operation Continuing Promise 2015</em></p>
+                            <ul>
+                                <li>Supervised Post-Anesthesia Care Unit (PACU) operations, ensuring patient safety and
+                                    recovery after surgery.</li>
+                                <li>Worked with multinational teams to provide medical aid, disaster relief, and public
+                                    health education in underserved communities.</li>
+                                <li>Assisted in logistics and planning for high-volume patient care, enhancing medical
+                                    readiness.</li>
+                            </ul>
+                        </div>
                     </div>
+
                 </div>
 
+                <hr>
+                <!-- Certification -->
+                <div class="resume-certifications">
+                    <h2>Certifications</h2>
+                    <dl>
+                        <dt>Master Training Specialist</dt>
+                        <dd>Naval Medical Forces Support Command</dd>
+                        <dd>Issued: April 2021</dd>
 
-                <!-- Volunteer Experience Section -->
-                <div class="resume-section volunteer-experience">
+                        <dt>Computer Operator journeyman</dt>
+                        <dd>U.S Department of Labor</dd>
+                        <dd>Issued: September 2020</dd>
+
+                        <dt>Naval Aviation Water Survival Training Instructor</dt>
+                        <dd>Naval Survival Training Institute</dd>
+                        <dd>Issued: July 2019</dd>
+
+                        <dt>DoD Sexual Assault Victim Advocate</dt>
+                        <dd>U.S. Department of Defense</dd>
+                        <dd>Issued: February 2019</dd>
+
+                        <dt>Registered Medical Assistant</dt>
+                        <dd>American Registry of Medical Assistants</dd>
+                        <dd>Issued: July 2026</dd>
+                    </dl>
+                </div>
+
+                <hr>
+                <!-- Volunteer Experience -->
+                <div class="resume-volunteer">
                     <h2>Volunteer Experience</h2>
                     <ul>
-                        <li><strong>Oak Harbor School District – Oak Harbor, WA</strong> | Jan 2018 – Present</li>
-                        <li><strong>Adopt-a-Highway – Island County, WA</strong> | Jan 2018 – Apr 2021</li>
-                        <li><strong>The Helpers Organization – Norfolk, VA</strong> | Jan 2016 – Dec 2017</li>
+                        <li><strong>Oak Harbor School District - Oak Harbor, WA</strong> | Jan 2018 - Present</li>
+                        <li><strong>Adopt-a-Highway - Island County, WA</strong> | Jan 2018 - Apr 2021</li>
+                        <li><strong>The Helpers Organization - Norfolk, VA</strong> | Jan 2016 - Dec 2017</li>
                     </ul>
                 </div>
             </div>
         </section>
-
 
 
         <!-- Portfolio Section -->
@@ -333,7 +412,6 @@
         </section>
 
 
-
         <!-- Links Section -->
         <section id="links">
 
@@ -363,7 +441,6 @@
                 </ul>
             </div>
         </section>
-
 
 
         <!-- Contact Section -->

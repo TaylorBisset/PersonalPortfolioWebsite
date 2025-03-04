@@ -44,9 +44,10 @@
     background: var(--secondary);
     color: var(--primary);
     padding: 8px 8px;
+    padding-bottom: 11px;
     cursor: pointer;
     font-size: 2rem;
-    border-radius: 5px;
+    border-radius: 25px;
     border: 1px solid var(--accent-dark);
     transition: background 0.3s ease;
     margin: 0 15px;
@@ -72,6 +73,18 @@ body {
     background-color: var(--primary);
     color: var(--text-primary);
     line-height: 1.6;
+}
+
+hr {
+    border: none;
+    border-top: 4px solid var(--secondary); 
+    margin: 2rem 0; 
+}
+
+section {
+    transition: opacity 0.75s ease-in-out;
+    min-height: 50vh;
+    align-content: center;
 }
 
 
@@ -191,6 +204,12 @@ nav {
     color: var(--text-primary);
 }
 
+h2 {
+    color: var(--accent-dark); 
+    margin-bottom: 1rem; 
+    font-size: 1.8rem; 
+}
+
 
 /* =========================== |
 | - - - - - About Me - - - - - |
@@ -210,6 +229,7 @@ nav {
 
 .about-header h2 {
     font-size: 2rem;
+    color: var(--text-primary);
     border-bottom: 2px solid var(--accent);
     padding-bottom: 0.5rem;
 }
@@ -253,39 +273,132 @@ nav {
     display: inline-block;
     padding-bottom: 0.5rem;
 }
-  
+
 .resume-content {
     max-width: 1000px;
     margin: 0 auto;
     background-color: var(--primary);
     padding: 2rem;
-    border-radius: 8px;
+    border-radius: 10px;
 }
-  
+
+
+.resume-content ul {
+    list-style-type: none;
+    padding: 1.5rem;
+}
+
+.resume-content li {
+    position: relative;
+    padding-left: 1.5rem;
+    line-height: 1.5;
+}
+
+.resume-content ul li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 1rem;
+}
+
+/* List bullet point */
+.resume-content ul li::before {
+    position: absolute;
+    content: '\2022';
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    color: var(--accent);
+    font-size: 1.5rem;
+}
+
+.resume-content ul li:hover {
+    background-color: var(--secondary-dark);
+    color: var(--text-primary);
+    padding-left: 30px;
+    transition: all 0.3s ease;
+}
+
 .resume-section {
     margin-bottom: 2rem;
 }
-  
+
 .resume-section h2 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
     color: var(--accent);
 }
-  
+
 .skills-table-wrapper {
     overflow-x: auto;
 }
-  
+
 .skills-table {
     width: 100%;
     border-collapse: collapse;
-    margin: 0 auto;
+    margin-top: 1rem;
 }
   
 .skills-table th, .skills-table td {
-    border: 1px solid var(--secondary-dark);
-    padding: 0.5rem;
+    border-bottom: 2px solid var(--accent-dark);
+    padding: 0.75rem;
     text-align: left;
+}
+
+.skills-table th {
+    background-color: var(--accent-dark);
+    color: var(--primary);
+}
+
+.skills-table tr:hover {
+    background-color: var(--secondary-dark);
+    transition: background-color 0.3s ease;
+}
+
+
+.timeline-item {
+    position: relative;
+    padding-left: 3rem; 
+    margin-bottom: 2rem;
+}
+  
+/* Timeline Line */
+.timeline-item::before { 
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2px; 
+    height: 100%;
+    background-color: var(--accent);
+}
+  
+/* Timeline Dot */
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    left: -6.95px; /* Position */
+    top: 0;
+    width: 16px; /* Circle diameter */
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--accent); 
+}
+
+.resume-certifications dl {
+    margin: 1rem 0;
+    padding: 0;
+}
+
+.resume-certifications dt {
+    font-weight: bold;
+    color: var(--accent);
+    margin-bottom: 0.25rem;
+}
+
+.resume-certifications dd {
+    margin-left: 1.5rem;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
 }
 
 
@@ -518,6 +631,19 @@ footer p {
     }
     .hero p {
         font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .skills-table {
+        font-size: 0.9rem;
+    }
+
+    .cta-button {
+        font-size: 0.9rem;
+        padding: 0.5rem 1.5rem;
     }
 }
   
