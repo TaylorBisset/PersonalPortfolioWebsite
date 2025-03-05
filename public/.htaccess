@@ -1,0 +1,32 @@
+# Enable URL rewriting
+RewriteEngine On
+
+# Set default index page (index.html)
+DirectoryIndex index.html
+
+# Force HTTPS (if SSL is set up)
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Prevent directory listing (Security measure)
+Options -Indexes
+
+# Custom Error Pages (Custom error pages like 404.html, 500.html, etc.)
+ErrorDocument 404 /404.html
+ErrorDocument 500 /500.html
+
+# Set caching for images, css, and js for better performance
+<FilesMatch "\.(jpg|jpeg|png|gif|css|js|pdf)$">
+    ExpiresActive On
+    ExpiresDefault "access plus 1 year"
+</FilesMatch>
+
+# Prevent access to .htaccess file
+<Files ".htaccess">
+    Require all denied
+</Files>
+
+# Deny access to sensitive files (if any)
+<FilesMatch "\.(env|ini|log|sh|bak|old)$">
+    Require all denied
+</FilesMatch>
