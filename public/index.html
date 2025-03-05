@@ -8,7 +8,7 @@
     <!-- Viewport Settings -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- PAge Title -->
+    <!-- Page Title -->
     <title>Taylor Bisset</title>
 
     <!-- Canonical Tag -->
@@ -46,6 +46,12 @@
     <!-- jQuery (3.7.1 from CDN) -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
 
+    <!-- typed.js -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12" defer></script>
+
+    <!-- particles.js -->
+    <script src="js/particles.js" defer></script>
+
     <!-- JavaScript -->
     <script src="js/script.js" defer></script>
 
@@ -57,8 +63,12 @@
             "jobTitle": "Game Developer, Web Designer",
             "url": "https://taylorbisset.com",
             "sameAs": [
-                "https://github.com/TaylorBisset",
-                "https://linkedin.com/in/TaylorBisset"
+                "https://github.com/taylorbisset", 
+                "https://linkedin.com/in/taylorbisset", 
+                "https://www.youtube.com/@taylorbisset", 
+                "https://twitter.com/taylorbisset", 
+                "https://instagram.com/taylorbisset", 
+                "https://taylorbisset.tumblr.com"
             ]
         }
     </script>
@@ -90,12 +100,17 @@
     <main>
 
         <!-- Hero Section -->
-        <section id="hero" class="hero">
+        <section id="hero" class="hero"> <!-- z-index 0 -->
 
-            <div class="hero-div">
+            <!-- particles.js effect -->
+            <div id="particles-js"></div> <!-- z-index 1 -->
+
+            <div class="hero-div"> <!-- z-index 2 -->
                 <h1>Hi, I'm Taylor Bisset</h1>
 
-                <p><strong>A passionate Computer Science student, game developer, and web designer.</strong></p>
+                <!-- typed.js effect -->
+                <p><strong>Welcome to my website!</strong></p>
+                <p><strong id="typed-text"></strong></p>
 
                 <a href="#portfolio" class="cta-button">View My Work</a>
 
@@ -357,7 +372,7 @@
 
                         <dt>Registered Medical Assistant</dt>
                         <dd>American Registry of Medical Assistants</dd>
-                        <dd>Issued: July 2026</dd>
+                        <dd>Issued: July 2016</dd>
                     </dl>
                 </div>
 

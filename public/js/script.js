@@ -21,7 +21,6 @@ themeToggle.addEventListener('click', () => {
     }
 });
 
-
 // JQuery Section fade-in script
 $(document).ready(function () {
     $("section").not(".hero").css("opacity", 0); // Set initial opacity to 0
@@ -32,5 +31,26 @@ $(document).ready(function () {
                 $(this).css("opacity", 1); 
             }
         });
+    });
+});
+
+// Initialize Particles.js
+particlesJS.load('particles-js', 'js/particles.json', function() {
+    console.log('Particles.js loaded');
+});
+
+// Initialize Typed.js
+document.addEventListener("DOMContentLoaded", function () {
+    var typed = new Typed('#typed-text', {
+        strings: [
+            "A computer science student.",
+            "A technical writer.",
+            "A game developer.",
+            "A web designer.",
+            "An educator."
+        ],
+        typeSpeed: 50,
+        backSpeed: 25,
+        loop: true
     });
 });
