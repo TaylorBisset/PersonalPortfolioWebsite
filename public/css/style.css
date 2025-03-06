@@ -324,7 +324,7 @@ h2 {
     transform: translateY(-50%);
     left: 0;
     color: var(--accent);
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 .resume-content ul li:hover {
