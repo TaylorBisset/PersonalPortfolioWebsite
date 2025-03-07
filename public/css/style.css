@@ -67,6 +67,10 @@
     margin: 0;
     padding: 0;
 }
+
+html {
+    scroll-padding-top: 80px;
+}
   
 body {
     font-family: 'Quicksand', sans-serif;
