@@ -12,11 +12,22 @@ RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 Options -Indexes
 
 # Custom Error Pages (Custom error pages like 404.html, 500.html, etc.)
-ErrorDocument 404 /404.html
-ErrorDocument 500 /500.html
 
-# Set caching for images, css, and js for better performance
-<FilesMatch "\.(jpg|jpeg|png|gif|css|js|pdf)$">
+# Unauthorized - Login required
+ErrorDocument 401 /error/401.html
+# Forbidden	- Access denied
+ErrorDocument 403 /error/403.html
+# Not Found	- Page doesn’t exist
+ErrorDocument 404 /error/404.html
+# Internal Server Error	- Server-side issue
+ErrorDocument 500 /error/500.html
+# Bad Gateway - Server acting as a gateway is unreachable
+ErrorDocument 502 /error/502.html
+# Service Unavailable - Site under maintenance
+ErrorDocument 503 /error/503.html
+
+# Set caching for images, CSS, and JS for better performance
+<FilesMatch "\.(jpg|jpeg|png|gif|css|js|pdf|webp|svg|woff|woff2|eot|ttf|otf)$">
     ExpiresActive On
     ExpiresDefault "access plus 1 year"
 </FilesMatch>
@@ -27,6 +38,25 @@ ErrorDocument 500 /500.html
 </Files>
 
 # Deny access to sensitive files (if any)
-<FilesMatch "\.(env|ini|log|sh|bak|old)$">
+<FilesMatch "\.(env|ini|log|sh|bak|old|sql|conf|yaml|json|xml|db)$">
     Require all denied
 </FilesMatch>
+
+# Deny direct access to all PHP files (except for AJAX and form handling)
+<FilesMatch "\.php$">
+    Require all denied
+</FilesMatch>
+
+# ALLOW access to specific PHP files if needed (e.g., contact.php)
+<Files "contact.php">
+    Require all granted
+</Files>
+
+# Prevent hotlinking (people using your images on their sites)
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^https://(www\.)?yourdomain\.com/ [NC]
+RewriteRule \.(jpg|jpeg|png|gif|webp|svg)$ - [F,NC]
+
+# Block common bad bots
+SetEnvIfNoCase User-Agent "badbot" bad_bot
+Deny from env=bad_bot
