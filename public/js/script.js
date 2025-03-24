@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
             "A copyeditor.",
             "An entrepreneur.",
             "A game designer.",
-            "A web designer.",
+            "A web developer.",
             "A publisher.",
             "An educator.",
             "An artist.",

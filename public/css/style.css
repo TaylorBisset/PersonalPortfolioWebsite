@@ -641,6 +641,40 @@ footer p {
     margin: 0.5rem 0;
 }
 
+.footer-links {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer-links a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer-links a img {
+    width: 24px;
+    height: 24px;
+    transition: opacity 0.3s ease;
+}
+
+.footer-links a img:hover {
+    opacity: 0.7;
+}
+
+.footer-links a span {
+    display: none; /* Hides the text by default */
+}
+
+/* Show the text only if the image fails to load */
+.footer-links a img:not([src]) + span {
+    display: inline;
+}
+
 
 /* ============================= |
 | - - - - - Responsive - - - - - |
