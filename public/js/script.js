@@ -28,14 +28,14 @@ $(document).ready(function () {
     $(window).on("scroll", function () {
         $("section").each(function () {
             if ($(this).offset().top < $(window).scrollTop() + $(window).height() - 100) {
-                $(this).css("opacity", 1); 
+                $(this).css("opacity", 1);
             }
         });
     });
 });
 
 // Initialize Particles.js
-particlesJS.load('particles-js', 'js/particles.json', function() {
+particlesJS.load('particles-js', 'js/particles.json', function () {
     console.log('Particles.js loaded');
 });
 
@@ -59,4 +59,24 @@ document.addEventListener("DOMContentLoaded", function () {
         backSpeed: 25,
         loop: true
     });
+});
+
+// Contact form submission validation script
+document.getElementById("contactForm").addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    let formData = new FormData(this); // Get form data
+
+    fetch("php/contact.php", {
+        method: "POST",
+        body: formData
+    })
+        .then(response => response.text()) // Get the response as text
+        .then(data => {
+            document.getElementById("responseMessage").textContent = data; // Show response message
+        })
+        .catch(error => {
+            console.error("Error:", error);
+            document.getElementById("responseMessage").textContent = "Something went wrong. Try again.";
+        });
 });

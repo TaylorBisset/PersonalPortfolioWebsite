@@ -69,7 +69,7 @@
                 "https://github.com/taylorbisset", 
                 "https://www.youtube.com/@taylorbisset", 
                 "https://twitter.com/taylorbisset", 
-                "https://facebook.com/taylorbisset", 
+                "https://facebook.com/taylor.j.bisset", 
                 "https://instagram.com/taylorbisset", 
                 "https://taylorbisset.tumblr.com" 
             ]
@@ -527,21 +527,21 @@
 
             <!-- Contact Content -->
             <div class="contact-header">
-                <form action="php/contact.php" method="POST" enctype="text/plain">
-
+                <form id="contactForm">
                     <label for="name">Name</label>
-                    <input type="text" id="name" placeholder="Your Name" required>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
 
                     <label for="email">Email</label>
-                    <input type="email" id="email" placeholder="Your Email" required>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
 
                     <label for="message">Message</label>
-                    <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+                    <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
 
                     <button type="submit" class="cta-button">Send Message</button>
-
+                    <p id="responseMessage"></p>
                 </form>
             </div>
+
         </section>
 
     </main>
@@ -550,7 +550,7 @@
     <footer>
         <p>&copy; <span id="year"></span> Taylor Bisset. All rights reserved.</p>
         <p>Built with passion by <strong>Taylor Bisset</strong></p>
-    
+
         <div class="footer-links">
             <a href="https://www.linkedin.com/in/TaylorBisset" target="_blank" rel="noopener noreferrer">
                 <img src="images/linkedin.svg" alt="Follow Taylor Bisset on LinkedIn">
@@ -575,8 +575,10 @@
             </a>
         </div>
 
-        <span>icons by <a href="https://icons8.com/" target="_blank" rel="noopener noreferrer">icons8</a></span>
-    
+        <p><small>
+            icon art by <a href="https://icons8.com/" target="_blank" rel="noopener noreferrer">icons8</a>
+        </small></p>
+
         <script>
             document.getElementById("year").textContent = new Date().getFullYear();
         </script>
