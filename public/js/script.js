@@ -43,17 +43,11 @@ particlesJS.load('particles-js', 'js/particles.json', function () {
 document.addEventListener("DOMContentLoaded", function () {
     var typed = new Typed('#typed-text', {
         strings: [
-            "A university student.",
-            "A storyteller.",
             "A technical writer.",
-            "A copyeditor.",
-            "An entrepreneur.",
-            "A game designer.",
-            "A web developer.",
-            "A publisher.",
-            "An educator.",
-            "An artist.",
-            "A leader."
+            "An editor.",
+            "A storyteller.",
+            "A creative writer.",
+            "An educator."
         ],
         typeSpeed: 50,
         backSpeed: 25,
