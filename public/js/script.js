@@ -68,6 +68,9 @@ document.getElementById("contactForm").addEventListener("submit", function (even
         .then(response => response.text()) // Get the response as text
         .then(data => {
             document.getElementById("responseMessage").textContent = data; // Show response message
+            if (data.includes("successfully")) {
+                this.reset(); // Clear form fields
+            }
         })
         .catch(error => {
             console.error("Error:", error);
