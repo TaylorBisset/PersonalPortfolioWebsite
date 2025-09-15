@@ -57,7 +57,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Contact form submission validation script
 document.getElementById("contactForm").addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevent the default form submission
+    event.preventDefault(); // Prevent default form submission
+
+    const button = this.querySelector('button[type="submit"]'); // Grab submit button
+    button.disabled = true; // Disable it immediately
+
+    const responseMessage = document.getElementById("responseMessage");
+    responseMessage.textContent = "Sending..."; // Show sending feedback
 
     let formData = new FormData(this); // Get form data
 
@@ -65,15 +71,18 @@ document.getElementById("contactForm").addEventListener("submit", function (even
         method: "POST",
         body: formData
     })
-        .then(response => response.text()) // Get the response as text
+        .then(response => response.text())
         .then(data => {
-            document.getElementById("responseMessage").textContent = data; // Show response message
-            if (data.includes("successfully")) {
-                this.reset(); // Clear form fields
+            responseMessage.textContent = data; // Show response
+            if (data.toLowerCase().includes("successfully")) {
+                this.reset(); // Clear the form on success
             }
         })
         .catch(error => {
             console.error("Error:", error);
-            document.getElementById("responseMessage").textContent = "Something went wrong. Try again.";
+            responseMessage.textContent = "Something went wrong. Try again.";
+        })
+        .finally(() => {
+            button.disabled = false; // Re-enable button whether success or fail
         });
 });
