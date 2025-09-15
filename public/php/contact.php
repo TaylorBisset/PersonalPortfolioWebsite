@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Recipient and email headers
-    $to = "TaylorBisset@ProtonMail.com"; // Your email
+    $to = "Taylor@TaylorBisset.com"; // Your email
     $subject = "New Contact Form Submission from $name";
     $headers = "From: $email\r\n";
     $headers .= "Reply-To: $email\r\n";
