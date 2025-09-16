@@ -55,27 +55,29 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// Contact form submission validation script
+// Web3Forms contact form submission
 document.getElementById("contactForm").addEventListener("submit", function (event) {
     event.preventDefault(); // Prevent default form submission
 
-    const button = this.querySelector('button[type="submit"]'); // Grab submit button
-    button.disabled = true; // Disable it immediately
+    const button = this.querySelector('button[type="submit"]');
+    button.disabled = true;
 
     const responseMessage = document.getElementById("responseMessage");
-    responseMessage.textContent = "Sending..."; // Show sending feedback
+    responseMessage.textContent = "Sending...";
 
-    let formData = new FormData(this); // Get form data
+    const formData = new FormData(this);
 
-    fetch("php/contact.php", {
+    fetch("https://api.web3forms.com/submit", {
         method: "POST",
         body: formData
     })
-        .then(response => response.text())
-        .then(data => {
-            responseMessage.textContent = data; // Show response
-            if (data.toLowerCase().includes("successfully")) {
-                this.reset(); // Clear the form on success
+        .then(async response => {
+            const data = await response.json();
+            if (data.success) {
+                responseMessage.textContent = "Message sent successfully!";
+                this.reset();
+            } else {
+                responseMessage.textContent = "Failed to send message. Try again.";
             }
         })
         .catch(error => {
@@ -83,6 +85,6 @@ document.getElementById("contactForm").addEventListener("submit", function (even
             responseMessage.textContent = "Something went wrong. Try again.";
         })
         .finally(() => {
-            button.disabled = false; // Re-enable button whether success or fail
+            button.disabled = false;
         });
 });
